@@ -18,7 +18,8 @@ export EDITOR="/usr/bin/vim"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+# ZSH_THEME="robbyrussell"
+ZSH_THEME="powerlevel10k/powerlevel10k"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -111,7 +112,7 @@ export N_PREFIX=~/.n
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-source ~/powerlevel10k/powerlevel10k.zsh-theme
+# source ~/powerlevel10k/powerlevel10k.zsh-theme
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
@@ -120,45 +121,8 @@ export PATH="$PATH:/Users/daniel.rozsa/.nsccli/bin"
 export PATH="/opt/homebrew/opt/openjdk/bin:$PATH"
 
 # Custom aliases
-alias fms="cd ~/docler/live-service/fms"
-alias lsentry="cd ~/docler/live-service/ls-entry"
-alias lss="cd ~/git/lss"
-alias golivetool="cd ~/docler/stream/go-live-tool"
 
-. "/Users/daniel.rozsa/.deno/env"
 # Initialize zsh completions (added by deno install script)
 autoload -Uz compinit
 compinit
 
-# Added by LM Studio CLI (lms)
-export PATH="$PATH:/Users/daniel.rozsa/.lmstudio/bin"
-
-# Added by Windsurf
-export PATH="/Users/daniel.rozsa/.codeium/windsurf/bin:$PATH"
-export PATH="${KREW_ROOT:-$HOME/.krew}/bin:$PATH"
-export PATH=$HOME/.kube-docler-plugins:$PATH 
-
-export PIPX_DEFAULT_PYTHON=/opt/homebrew/bin/python3.12
-
-. "$HOME/.local/bin/env"
-
-
-
-# Added by Antigravity
-export PATH="/Users/daniel.rozsa/.antigravity/antigravity/bin:$PATH"
-
-alias claude="/Users/daniel.rozsa/.claude/local/claude"
-alias zed="open -a /Applications/Zed.app -n"
-
-# bun completions
-[ -s "/Users/daniel.rozsa/.bun/_bun" ] && source "/Users/daniel.rozsa/.bun/_bun"
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
-
-alias claude-mem='/Users/daniel.rozsa/.bun/bin/bun "/Users/daniel.rozsa/.claude/plugins/marketplaces/thedotmack/plugin/scripts/worker-service.cjs"'
-
-# bun
-export BUN_INSTALL="$HOME/.bun"
-export PATH="$BUN_INSTALL/bin:$PATH"
